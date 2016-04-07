@@ -1,9 +1,12 @@
 //runs server// conects FE --> database
 // SERVER-SIDE JAVASCRIPT
 
+
+
 //require express in our app
 
-var express = require('express');
+var express = require('express'),
+    database = require('./models'),
     app = express();
 
     // serve static files from public folder
@@ -25,14 +28,13 @@ res.sendFile(__dirname + '/views/index.html');
  * JSON API Endpoints
  */
 
-app.get('/', function homepage(req, res) {
-  res.sendFile(_dirname + '/views/index.html');
-});
 
 //app.get('/api/');
 
 //app.post('/api/');
-
+app.get('/api/sanity', function sanity(req, res) {
+  
+});
 
 /**********
  * SERVER *
