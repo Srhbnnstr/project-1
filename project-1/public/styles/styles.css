@@ -16,6 +16,14 @@ body {
   color: #fff;
 }
 
-legend {
+h3 {
   text-align: center;
+}
+
+.scrollbox {
+  height: 400px;
+  width: 600px;
+  overflow:auto;
+  border:5px dotted #3a3a3a;
+  border-radius: 5%;
 }
