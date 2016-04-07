@@ -1,6 +1,10 @@
+/* BODY */
+
 body {
   background-color: #dbdbdb;
 }
+
+/* HEADER */
 
 .jumbotron {
   background: url('jumbo.jpg');
@@ -11,14 +15,19 @@ body {
   height: 540px;
 }
 
+/* FORMS */
+
+h3 {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
 #submit {
   background-color: #018f7f;
   color: #fff;
 }
 
-h3 {
-  text-align: center;
-}
+/* SCROLLBOX LIST */
 
 .scrollbox {
   height: 600px;
@@ -27,6 +36,8 @@ h3 {
   border:5px dotted  #3a3a3a;
   border-radius: 5%;
 }
+
+/* FOOTER */
 
 footer {
   width: 100%;
