@@ -11,6 +11,7 @@ var express = require('express'),
 
     // serve static files from public folder
     app.use(express.static(__dirname + '/public'));
+    var controllers = require('./controllers');
 
 /**********
  * ROUTES *
@@ -32,9 +33,6 @@ res.sendFile(__dirname + '/views/index.html');
 //app.get('/api/');
 
 //app.post('/api/');
-app.get('/api/sanity', function sanity(req, res) {
-  
-});
 
 /**********
  * SERVER *

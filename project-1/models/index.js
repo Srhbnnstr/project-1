@@ -1,4 +1,4 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongdb://localhost/anifull-test');
+mongoose.connect('mongodb://localhost/anifull-test');
 
 var Animal = require('./animals');

@@ -8,5 +8,3 @@ var AnimalSchema = new Schema({
 });
 
 var Album = mongoose.model('Animal', AnimalSchema);
-
-module.exports = Animal;
