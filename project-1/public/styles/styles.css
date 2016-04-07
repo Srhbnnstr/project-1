@@ -1,5 +1,5 @@
 body {
-  background-color: lightgray;
+  background-color: #dbdbdb;
 }
 
 .jumbotron {
@@ -9,4 +9,13 @@ body {
 }
 .jumbotron .container {
   height: 540px;
+}
+
+#submit {
+  background-color: #018f7f;
+  color: #fff;
+}
+
+legend {
+  text-align: center;
 }

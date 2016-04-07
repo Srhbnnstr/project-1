@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <html lang="en">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,16 +17,68 @@
 
   <!-- APP SCRIPTS -->
   <script src="scripts/app.js"></script>
-  </head>
+</head>
 
-  <body>
-    <section class="container">
-      <div class="row">
-        <div class="col-md-12">
-    <div class="jumbotron">
-      <div class="container">
-      </div>
-    </div>
-    <hr>
-  </body>
-</html>
+<body>
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="jumbotron">
+          <div class="container">
+          </div>
+        </div>
+        <hr>
+        <!-- BEGIN FORM SAMPLE -->
+
+        <section id='animal-form' class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-6">
+
+              <form class="form-horizontal">
+                <fieldset>
+
+                  <!-- Form Name -->
+                  <legend>Add a New Animal to the List</legend>
+
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="name">Animal Name</label>
+                    <div class="col-md-4">
+                      <input id="name" name="name" type="text" placeholder="e.g. African Wild Dog" class="form-control input-md" required="">
+
+                    </div>
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="artistName">Native Habitat</label>
+                    <div class="col-md-4">
+                      <input id="textinput" name="location" type="text" placeholder="sub-Saharan Africa" class="form-control input-md">
+
+                    </div>
+                  </div>
+
+                  <!-- Textarea -->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="funFact">Fun Fact</label>
+                    <div class="col-md-4">
+                      <textarea class="form-control" id="fact" name="funFact" placeholder="Share with the world!"></textarea>
+                    </div>
+                  </div>
+
+                  <!-- Button -->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="singlebutton">Save Album</label>
+                    <div class="col-md-4">
+                      <button id="submit" name="singlebutton" class="btn btn-default">Submit</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- end of forms -->
+
+      </body>
+      </html>
