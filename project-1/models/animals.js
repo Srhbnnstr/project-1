@@ -2,9 +2,12 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var AnimalSchema = new Schema({
-  animalName: String,
+  name: String,
+  image: String,
   location: String,
-  facts: [ String ]
+  facts: [typeSchema],
 });
 
-var Album = mongoose.model('Animal', AnimalSchema);
+var Animal = mongoose.model('Animal', AnimalSchema);
+
+module.exports = Animal;
