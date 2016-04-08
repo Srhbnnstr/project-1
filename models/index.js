@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 mongoose.connect('mongodb://localhost/anifull-test');
 
-// var Animal = require('./animal');
+var Animal = require('./animals');
 
 module.exports.Animal = Animal;
