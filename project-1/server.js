@@ -11,7 +11,7 @@ var express = require('express'),
 
     // serve static files from public folder
     app.use(express.static(__dirname + '/public'));
-    // var controllers = require('./controllers');
+    var controllers = require('./controllers');
 
 /**********
  * ROUTES *
@@ -31,8 +31,7 @@ res.sendFile(__dirname + '/views/index.html');
 
 
 // app.get('/api', controllers.api.index);
-//
-// app.get('/api/animals', controllers.animals.index);
+//app.get('/api/animals', controllers.animals.index);
 
 /**********
  * SERVER *

@@ -9,7 +9,7 @@ body {
 .jumbotron {
   background: url('jumbo.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat
 }
 .jumbotron .container {
   height: 540px;
@@ -20,6 +20,7 @@ body {
 h3 {
   text-align: center;
   padding-bottom: 40px;
+  margin-top: auto;
 }
 
 #submit {
@@ -30,7 +31,7 @@ h3 {
 /* SCROLLBOX LIST */
 
 .scrollbox {
-  height: 600px;
+  height: 400px;
   width: 600px;
   overflow:auto;
   border:5px dotted  #3a3a3a;

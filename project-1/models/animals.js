@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var AnimalSchema = new Schema({
-  name: String,
+  Name: String,
   image: String,
   location: String,
   facts: [typeSchema],
