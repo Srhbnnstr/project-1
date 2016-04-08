@@ -1,0 +1,21 @@
+{
+  "name": "project-1",
+  "version": "1.0.0",
+  "description": "An app to learn new animal facts",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sarah Bannister <srhbnnstr@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongoose": "^4.4.11",
+    "nodemon": "^1.9.1"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {}
+}
