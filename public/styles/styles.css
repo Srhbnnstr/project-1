@@ -19,8 +19,9 @@ body {
 
 h3 {
   text-align: center;
-  padding-bottom: 40px;
+  padding: 20px 0;
   margin-top: auto;
+  background-color: #dbdbdb;
 }
 
 #submit {
@@ -31,12 +32,17 @@ h3 {
 /* SCROLLBOX LIST */
 
 .scrollbox {
+  text-align: center;
   height: 400px;
-  width: 600px;
+  width: 400px;
   overflow:auto;
   border:5px dotted  #3a3a3a;
   border-radius: 5%;
+  padding: 30px 0 30px 60px;
+  margin: 20px 0 20px 60px;
 }
+
+
 
 /* FOOTER */
 
