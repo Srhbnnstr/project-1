@@ -12,7 +12,7 @@ $(document).ready(function() {
     e.preventDefault();
     var formData = $(this).serialize();
     console.log('formData', formData);
-    $.post('/api/animals', formData, function(album) {
+    $.post('/api/animals', formData, function(animal) {
       console.log('animal after POST', animal);
       renderAnimal(animal);  //render the server's response
     });
