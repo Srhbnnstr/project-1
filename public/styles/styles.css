@@ -18,12 +18,11 @@ body {
 /* FORMS */
 
 fieldset {
-
+  margin: 0 -60px 0 30px;
 }
 
 h3 {
-  text-align: center;
-  padding: 20px 0;
+  padding: 20px;
   margin-top: auto;
   background-color: #dbdbdb;
 }
@@ -36,14 +35,13 @@ h3 {
 /* SCROLLBOX LIST */
 
 .scrollbox {
-  text-align: center;
   height: 400px;
   width: 400px;
   overflow:auto;
-  border:5px dotted  #3a3a3a;
+  border:4px dotted  #3a3a3a;
   border-radius: 5%;
   padding: 10px 0 30px 60px;
-  margin: 20px 0 20px 50px;
+  margin: 20px 0 20px 40px;
 }
 
 
