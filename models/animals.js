@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 var Fact = require('./fact.js');
 
 var AnimalSchema = new Schema({
-  Name: String,
+  name: String,
   image: String,
   location: String,
   facts: [ Fact.schema ]
