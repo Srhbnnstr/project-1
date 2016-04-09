@@ -1,5 +1,6 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
+
 var Fact = require('./fact.js');
 
 var AnimalSchema = new Schema({
@@ -12,4 +13,3 @@ var AnimalSchema = new Schema({
 var Animal = mongoose.model('Animal', AnimalSchema);
 
 module.exports = Animal;
-var Fact = require('./fact.js');

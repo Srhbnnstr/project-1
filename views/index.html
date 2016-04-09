@@ -5,6 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ani-full</title>
+  <!-- FONTS -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+  <!-- VENDOR SCRIPTS -->
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -92,6 +98,39 @@
           </div>
         </section>
         <!-- end of forms -->
+          <script id='profile-template' type='text/x-handlebars-template'>
+        <div class="modal fade" tabindex="-1" role="dialog" id="animalModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                   <li class="list-group-item">
+                     <div class="col-md-9 col-xs-12">
+                   <ul class="list-group">
+                     <li class="list-group-item">
+                       <h4 class='inline-header'>Common Name:</h4>
+                       <span class='animal-name'>{{name}}</span>
+                     </li>
+
+                     <li class="list-group-item">
+                       <span class='image'>{{image}}</span>
+                     </li>
+
+                     <li class="list-group-item">
+                       <h4 class='inline-header'>Location:</h4>
+                       <span class='album-releaseDate'>{{location}}</span>
+                     </li>
+
+                     <li class="list-group-item">
+                       <h4 class='inline-header'>Facts:</h4>
+                       <span class='album-releaseDate'>{{#each facts}} {{/each}}</span>
+                     </li>
+                   </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
         <footer>
           <div class="copyright">

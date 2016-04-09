@@ -2,6 +2,7 @@
 
 body {
   background-color: #dbdbdb;
+  font-family: 'Raleway', sans-serif;
 }
 
 /* HEADER */
@@ -25,6 +26,7 @@ h3 {
   padding: 20px;
   margin-top: auto;
   background-color: #dbdbdb;
+  font-weight: bold;
 }
 
 #submit {
@@ -41,9 +43,12 @@ h3 {
   border:4px dotted  #3a3a3a;
   border-radius: 5%;
   padding: 10px 0 30px 60px;
-  margin: 20px 0 20px 40px;
+  margin: 20px 0 20px 60px;
 }
 
+h4 {
+  font-weight: bold;
+}
 
 
 /* FOOTER */
