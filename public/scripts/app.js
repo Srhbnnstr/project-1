@@ -1,47 +1,44 @@
 /* CLIENT-SIDE JS */
 
-
-// $(document).ready(function() {
-//   console.log('app.js loaded!');
-//   $.get('/api/animals').success(function (animals) {
-//     albums.forEach(function(animal) {
-//       renderAnimal(animal);
-//     });
-//   });
-// });
-
-
-function renderAnimal(animal) {
-  //console.log('rendering album:', album)
-console.log('rendering animal', animal);
-var animalHtml = $('#animal-template').html();
-//console.log('got templatehtml')
-var animalstemplate = Handlebars.compile(animalHtml); //returns a function
-var html = animalstemplate(animal);
-$('#animals').prepend(html);
-}
+$(document).ready(function() {
+  console.log('app.js loaded!');
+  $.get('/api/animals').success(function (animals) {
+    animals.forEach(function(animal) {
+      renderAnimal(animal);
+    });
+  });
+});
 
 
- $(document).ready(function() {
-   console.log('app.js loaded!');
-   $.ajax({
-     url: '/api/animals',
-     method: 'GET',
-     success: handleSuccess,
-     error: handleError
-   });
- });
+      function renderAnimal(animal) {
+      console.log('rendering animal', animal);
+      var animalHtml = $('#animals-template').html();
+      console.log('got templatehtml');
+      var animalsTemplate = Handlebars.compile(animalHtml); //returns a function
+      var html = animalsTemplate(animal);
+      $('.scrollbox').append(html);
+      }
 
+ //
+ // $(document).ready(function() {
+ //   console.log('app.js loaded!');
+ //   $.ajax({
+ //     url: '/api/animals',
+ //     method: 'GET',
+ //     success: handleSuccess,
+ //     error: handleError
+ //   });
+ // });
 
-    function handleSuccess(json){
-    console.log(json);
-    json.forEach(renderAnimal);
-    }
-
-    function handleError(e) {
-      console.log('uh oh');
-      $('#albums').text('Something went wrong.');
-    }
+    // function handleSuccess(json){
+    // console.log(json);
+    // json.forEach(renderAnimal);
+    // }
+    //
+    // function handleError(e) {
+    //   console.log('uh oh');
+    //   $('#albums').text('Something went wrong.');
+    // }
  //
  //   $('#aninmal-form form').on ('submit', handleAnimalSubmit);
  //  });
@@ -70,5 +67,3 @@ $('#animals').prepend(html);
  //   console.log( $( this ).serialize() );
  //   $(this).trigger('reset');
  // });
-
- // this function takes a single album and renders it to the page

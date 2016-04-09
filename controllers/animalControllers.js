@@ -4,9 +4,9 @@
 
  var db = require('../models');
 
- // GET /api/albums
+ // GET /api/animals
 function index(req, res) {
-  db.Animal.find({}, function(err, allanimals) {
+  db.Animal.find({}, function(err, allAnimals) {
     res.json(allAnimals);
   });
 }

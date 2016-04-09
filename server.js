@@ -3,8 +3,8 @@
 //require express in our app
 var express = require('express');
 // generate a new express app and call it 'app'
-  // bodyParser = require('body-parser');
   var app = express();
+  // var bodyParser = require('body-parser');
 
 // serve static files from public folder
 app.use(express.static(__dirname + '/public'));
@@ -16,6 +16,7 @@ app.use(express.static(__dirname + '/public'));
 app.use('/vendor', express.static(__dirname + '/views/index.html'));
 
 var controllers = require('./controllers');
+var db = require('./models');
 
 
 /**********
@@ -37,9 +38,9 @@ app.get('/', function homepage (req, res) {
 
 app.get('/api', controllers.api.index);
 
-app.get('/api/amimals', controllers.animals.index);
+app.get('/api/animals', controllers.animals.index);
 
-// app.post('/api/animals', controllers.albums.create);
+app.post('/api/animals', controllers.animals.create);
 
 /**********
  * SERVER *
