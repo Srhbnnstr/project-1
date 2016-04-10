@@ -25,9 +25,7 @@
 <body>
   <section class="container">
     <div class="row">
-      <div class="col-lg-12">
-        <div class="jumbotron">
-          <div class="container">
+            <img class="banner" src="styles/jumbo.jpg">
           </div>
         </div>
         <hr>
@@ -35,7 +33,7 @@
         <!-- ANIMAL LIST -->
         <div id="animals">
           <div class="container">
-            <div class="row" data-animal-id="{{_id}}">
+            <div class="row" data-animal-id="{{id}}">
               <div class="col-sm-9 col-md-6 col-lg-6">
                 <div class="scrollbox">
                   <!-- handlebars template -->
@@ -43,7 +41,7 @@
                     <div class="col-md-9 col-xs-12">
                       <ul class="list-group">
                          <h4>{{name}}</h4>
-                         <src = {{image}} />
+                         {{image}}
                          <h4>location:</h4><p>{{location}}</p>
                          <h4>facts:</h4>
                          <ul>
@@ -52,7 +50,7 @@
                            <br>
                            {{/each}}
                          </ul>
-                         <button class='btn btn-danger delete-animal'>Delete Animal</button>
+                         <button class='btn btn-danger delete-animal' data-animal-id>Delete Animal</button>
                          <button class='btn btn-primary edit-animal'>Edit Animal</button>
                          <hr>
                         </li>
@@ -129,7 +127,7 @@
               </div>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
-        </div><!-- /.modal --> 
+        </div><!-- /.modal -->
 
         <footer>
           <div class="copyright">

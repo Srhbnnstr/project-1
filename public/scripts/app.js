@@ -36,7 +36,7 @@ $(document).ready(function() {
 // }
 
   function handleDeleteClick(e) {
-    var animalId = $(this).parents('.animal').data('animal-id');
+    var animalId = $(this).parents('.animals').data('animal-id');
     console.log('deleting animal' + animalId);
     $.ajax({
       url: '/api/animals/' + animalId,

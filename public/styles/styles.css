@@ -7,13 +7,9 @@ body {
 
 /* HEADER */
 
-.jumbotron {
-  background: url('jumbo.jpg');
-  background-size: cover;
-  background-repeat: no-repeat
-}
-.jumbotron .container {
-  height: 540px;
+.banner {
+  width: 100%;
+  height:auto;
 }
 
 /* FORMS */

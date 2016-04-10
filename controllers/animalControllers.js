@@ -14,6 +14,9 @@ function index(req, res) {
  function create(req, res) {
    console.log('body', req.body);
 
+  //  var facts = req.body.facts.split(',').map(function(item) { return item.trim(); } );
+  //   // req.body.facts = facts;
+
    db.Animal.create(req.body, function(err, animal) {
      if (err) { console.log('error', err); }
      console.log(animal);
@@ -23,8 +26,8 @@ function index(req, res) {
 
  function show(req, res) {
    db.Animal.findById(req.params.AnimalId, function(err, foundAnimal) {
-     if(err) {console.log('animalsController.show error', err); }
-     console.log('animalsController.show responding with', foundAnimal);
+     if(err) {console.log('animalControllers.show error', err); }
+     console.log('animalControllers.show responding with', foundAnimal);
      res.json(foundAnimal);
    });
  }
@@ -36,8 +39,18 @@ function index(req, res) {
  }
 
  function update(req, res) {
-   // FILL ME IN !
- }
+   console.log('updating with data', req.body);
+   db.Animal.findById(req.params.animalId, function(err, foundAnimal) {
+     if(err) {console.log('animalControllers.update error', err); }
+     foundAnimal.name = req.body.name;
+     foundAnimal.location = req.body.location;
+     foundAnimal.save(function(err, savedAnimal) {
+       if(err) {console.log('saving animal failed'); }
+       res.json(savedAnimal);
+     });
+   });
+
+   }
 
 
  // export public methods here
