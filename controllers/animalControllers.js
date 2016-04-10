@@ -22,11 +22,17 @@ function index(req, res) {
  }
 
  function show(req, res) {
-   // FILL ME IN !
+   db.Animal.findById(req.params.AnimalId, function(err, foundAnimal) {
+     if(err) {console.log('animalsController.show error', err); }
+     console.log('albumsController.show responding with', foundAnimal);
+     res.json(foundAnimal);
+   });
  }
 
  function destroy(req, res) {
-   // FILL ME IN !
+    db.Animal.findOneAndRemove({_id: req.params.animalId}, function(err, foundAnimal){
+      res.json(foundAnimal);
+    });
  }
 
  function update(req, res) {

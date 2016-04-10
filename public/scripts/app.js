@@ -19,95 +19,59 @@ $(document).ready(function() {
     $(this).trigger("reset");
   });
 
+
+  // $('#animals').on('click', handleAnimalClick);
+  $('#animals').on('click', '.delete-animal', handleDeleteClick);
+  // $('#animals').on('click', 'edit-animal', handleEditClick);
+  // $('#animals').on('click', '.save-animal', handleSaveClick);
 });
 
-function renderAnimal(animal) {
-  console.log('rendering animal', animal);
-  var animalHtml = $('#animals-template').html();
-  // console.log('got templatehtml');
-  var animalsTemplate = Handlebars.compile(animalHtml); //returns a function
-  var html = animalsTemplate(animal);
-  $('.scrollbox').append(html);
+  function fetchAndReRenderAnimalWithId(animalId) {
+  $.get('/api/animals/' + animalId, function(data) {
+    // remove the current instance of the album from the page
+    $('div[data-animal-id=' + animalId + ']').remove();
+    // re-render it with the new album data (including songs)
+    renderAnimal(data);
+  });
 }
 
-$('Animal').on('click', handleAnimalClick);
-
-// when the add song button is clicked, display the modal
-function handleAnimalClick(e) {
-  console.log('animal clicked!');
-  var currentAnimalId = $(this).closest('.data-animal-id').data('animal-id');
-  console.log('id',currentAnimalId);
-  $('#animalModal').data('animal-id', currentAnimalId);
-  $('#animalModal').modal();  // display the modal!
+  function handleDeleteClick(e) {
+    var animalId = $(this).parents('.animal').data('animal-id');
+    console.log('deleting animal' + animalId);
+    $.ajax({
+      url: '/api/animals/' + animalId,
+      method: 'DELETE',
+      success: handleDeleteAnimalSuccess
+    });
   }
 
-// (function() {
-//   // Simple modal
-// 	var modal = {
-// 		init: function() {
-// 			// Setup the template
-// 			this.source = $("#modal-template").html();
-// 			// Setup outercontainer
-// 			this.outercontainer = $('body');
-// 			// Get the stuff
-// 			this.clickToOpenModal();
-// 			// Close the stuff
-// 			this.closeModal();
-//
-// 		},
-// 		clickToOpenModal: function(context, thisLink) {
-// 			$('h4').on('click', function(e) {
-//         console.log('i was clicked');
-// 				var thisLink = $(this);
-// 				var context = {
-				// 	title: thisLink.data('title'),
-				// 	content: thisLink.data('content')
+    function handleDeleteAnimalSuccess(data) {
+    var deletedAnimalId = data._id;
+    console.log('removing the following animal from the page:', deletedAnimalId);
+    $('div[data-animal-id=' + deletedAnimalId + ']').remove();
+  }
 
-// 				e.preventDefault();
-// 		     // Do nothing if open
-// 		     if ( modal.outercontainer.children('div#modal').length ) return;
-// 		     // Attach the content to the the modal
-// 				modal.attachTemplate(context, thisLink);
-// 				// Trigger the open event
-// 				thisLink.trigger('open');
-// 			});
-//
-// 		},
-// 		attachTemplate: function(context, thisLink) {
-// 			 var source = Handlebars.compile(this.source);
-//         this.outercontainer
-//           .append(source(context))
-//           .promise()
-//           .done(function() {
-//           this
-//             .children('div#modal')
-//             .addClass('modal-visible');
-//            // Close the stuff
-//            thisLink.one('open', function() {
-//              modal.closeModal();
-//            });
-//
-//        });
-// 		},
-// 		closeModal: function() {
-// 			var container = $("div#modal");
-// 			// Remove modal on click background
-// 			container.on('click', function() {
-// 				container.remove();
-// 			});
-// 			// Remove modal on keypress ESC
-// 			$(document).on( 'keydown', function (e) {
-// 			    if ( e.keyCode === 27 ) {
-// 			       container.remove();
-// 			    }
-// 			});
-// 			// You can click on modal body
-// 			container.find('div.modal-body').on('click', function(e) {
-// 				e.stopPropagation();
-// 			});
-// 		}
-// 	};
-//
-// 	modal.init();
-//
-// })();
+// animals.forEach(function(animal) {
+//   var ajaxCall = $.ajax({
+//     method: 'PUT',
+//     url: url + data._id,
+//     error: function(err) {console.log('Error updating', animal.name, err); }
+//   });
+//     deferreds.push(ajaxCall);
+//   });
+
+  function renderAnimal(animal) {
+    console.log('rendering animal', animal);
+    var animalHtml = $('#animals-template').html();
+    // console.log('got templatehtml');
+    var animalsTemplate = Handlebars.compile(animalHtml); //returns a function
+    var html = animalsTemplate(animal);
+    $('.scrollbox').append(html);
+  }
+// function handleAnimalClick(e) {
+//   console.log('animal clicked!');
+//   var currentAnimalId = this.id;
+//   console.log('id',currentAnimalId);
+//   $('#animalModal').data('animal-id', currentAnimalId);
+//   $('#animalModal').modal();  // display the modal!
+//   }

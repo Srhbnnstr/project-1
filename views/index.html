@@ -11,10 +11,13 @@
   <!-- VENDOR SCRIPTS -->
   <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/styles.css">
+  <!-- APP SCRIPTS -->
+  <script src="scripts/app.js"></script>
 
 
 </head>
@@ -40,6 +43,16 @@
                     <div class="col-md-9 col-xs-12">
                       <ul class="list-group">
                          <h4>{{name}}</h4>
+                         <img {{bind-attr src="image"}} />
+                         <h4>location:</h4><p>{{location}}</p>
+                         <h4>facts:</h4>
+                         <ul>
+                           {{#each facts}}
+                           <li>{{fact}}</li>
+                           {{/each}}
+                         </ul>
+                         <button class='btn btn-danger delete-animal'>Delete Animal</button>
+                         <button class='btn btn-primary edit-animal'>Edit Animal</button>
                          <hr>
                         </li>
                     </script>
@@ -84,7 +97,7 @@
 
                         <!-- Button -->
                         <div class="form-group">
-                          <label class="col-md-4 control-label" for="singlebutton">Save Album</label>
+                          <label class="col-md-4 control-label" for="singlebutton"></label>
                           <div class="col-md-4">
                             <button id="submit" name="singlebutton" class="btn btn-default">Submit</button>
                           </div>
@@ -98,7 +111,7 @@
           </div>
         </section>
         <!-- end of forms -->
-        <script id="modal-template" type="text/x-handlebars-template">
+        <!-- <script id="modal-template" type="text/x-handlebars-template">
           <div id="animalModal" class="modal">
 	           <div class="modal-body">
 		             <h3>{{ name }}</h3>
@@ -107,9 +120,9 @@
                    <p>{{ facts }}</p>
 	               </div>
                 </div>
-              </script>
+              </script> -->
 
-        <script id='profile-template' type='text/x-handlebars-template'>
+        <!-- <script id='profile-template' type='text/x-handlebars-template'>
         <div class="modal fade" tabindex="-1" role="dialog" id="animalModal">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -141,7 +154,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
         <footer>
           <div class="copyright">
@@ -150,11 +163,6 @@
         </footer>
 
 
-      <!-- VENDOR SCRIPTS -->
-      <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
-      <!-- APP SCRIPTS -->
-      <script src="scripts/app.js"></script>
+
       </body>
       </html>

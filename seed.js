@@ -19,7 +19,7 @@ animalList.push({
 animalList.push({
   name: 'Chameleon',
   image: 'chameleon.jpg',
-  location: 'Afric, Asia and Southern Europe',
+  location: 'Africa, Asia and Southern Europe',
   facts: [{fact: "Chameleon eyes have a 360-degree arc of vision and can see two directions at once."},
   {fact: "Most chameleons change from brown to green and back, but some can turn almost any colour. A change can occur in as little as 20 seconds."}]
 });
@@ -91,6 +91,7 @@ animalList.push({
 
 db.Animal.remove({}, function(err, animals){
   console.log('removed all animals');
+
   db.Animal.create(animalList, function(err, animals){
     if (err) { return console.log('ERROR', err); }
     console.log("all animals:", animals);
