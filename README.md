@@ -1,18 +1,30 @@
 ## Ani-full
-Short explanation of the project (1-2 sentences) - what is the goal of the project and/or main functionality?
+Use Ani-full to learn about different animals all around the world and add your own
+animal knowledge to share with others.
 
 ## Link to project hosted on Heroku
 
 ## Technologies Used
 
-What technologies did you use to develop this project? (bullet points)
+* HTML
+* CSS
+* Bootstrap
+* Handlebars
+* Jquery
+* Mongodb
+* Express
+* AJAX
 
 ## Existing Features
 
-What features does your racing game have? (bullet points)
+* Aesthetically pleasing design and appearance
+* A user can access a list of animal profiles and edit/delete existing profiles
+* Input forms that allow users to add an animal and it's information to the list template
 
 ## Planned Features
 
-What changes would you make to your project if you continue to work on it? (bullet points)
+* Create a plotted map that will have different animal icons in their native habitat
+* Clickable icons that will pull up an animals profile in a modal window
+* API access for sharing facts/animal profiles on Facebook
 
 ## Screenshot(s) (optional)

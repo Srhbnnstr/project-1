@@ -43,7 +43,7 @@
                     <div class="col-md-9 col-xs-12">
                       <ul class="list-group">
                          <h4>{{name}}</h4>
-                         <img src = {{styles/image}} />
+                         <src = {{image}} />
                          <h4>location:</h4><p>{{location}}</p>
                          <h4>facts:</h4>
                          <ul>
@@ -90,11 +90,11 @@
 
                         <!-- Textarea -->
                         <div class="form-group">
-                          <label class="col-md-4 control-label" for="facts">Facts</label>
+                          <label class="col-md-4 control-label" for="funFact">Fun Fact</label>
                           <div class="col-md-4">
-                            <textarea class="form-control" id="textarea" name="facts" placeholder="Share with the world!"></textarea>
-                          </div>
+                         <textarea class="form-control" id="fact" name="funFact" placeholder="Share with the world!"></textarea>
                         </div>
+                      </div>
 
                         <!-- Button -->
                         <div class="form-group">
@@ -111,51 +111,25 @@
             </div>
           </div>
         </section>
-        <!-- end of forms -->
-        <!-- <script id="modal-template" type="text/x-handlebars-template">
-          <div id="animalModal" class="modal">
-	           <div class="modal-body">
-		             <h3>{{ name }}</h3>
-		               <p>{{ image }}</p>
-                   <p>{{ location }}</p>
-                   <p>{{ facts }}</p>
-	               </div>
-                </div>
-              </script> -->
 
-        <!-- <script id='profile-template' type='text/x-handlebars-template'>
-        <div class="modal fade" tabindex="-1" role="dialog" id="animalModal">
-          <div class="modal-dialog">
+              <!-- Edit AnimalModal -->
+        <!-- <div class="modal fade bs-modal-lg" id="editAnimalModal" tabindex="-1" role="dialog" aria-labelledby="editSongsAnimalTitle">
+          <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                   <li class="list-group-item">
-                     <div class="col-md-9 col-xs-12">
-                       <ul class="list-group">
-                     <li class="list-group-item">
-                       <h4 class='inline-header'>Common Name:</h4>
-                       <span class='animal-name'>{{name}}</span>
-                     </li>
-
-                     <li class="list-group-item">
-                       <span class='image'>{{image}}</span>
-                     </li>
-
-                     <li class="list-group-item">
-                       <h4 class='inline-header'>Location:</h4>
-                       <span class='location'>{{location}}</span>
-                     </li>
-
-                     <li class="list-group-item">
-                       <h4 class='inline-header'>Facts:</h4>
-                       <span class='facts'>{{#each facts}} {{/each}}</span>
-                     </li>
-                   </ul>
-                  </div>
-                </div>
+                <h4 class="modal-title" id="editAnimalModalTitle">Edit Animal</h4>
               </div>
-            </div>
-          </div> -->
+              <div class="modal-body" id='editAnimalModalBody'>
+                <p> REPLACE #editAnimalModalBody </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id='editAnimalModalSubmit'>Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal --> 
 
         <footer>
           <div class="copyright">

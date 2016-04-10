@@ -19,24 +19,25 @@ $(document).ready(function() {
     $(this).trigger("reset");
   });
 
+
   // $('#animals').on('click', handleAnimalClick);
   $('#animals').on('click', '.delete-animal', handleDeleteClick);
   // $('#animals').on('click', 'edit-animal', handleEditClick);
   // $('#animals').on('click', '.save-animal', handleSaveClick);
 });
 
-  function fetchAndReRenderAnimalWithId(animalId) {
-  $.get('/api/animals/' + animalId, function(data) {
-    // remove the current instance of the album from the page
-    $('div[data-animal-id=' + animalId + ']').remove();
-    // re-render it with the new album data (including songs)
-    renderAnimal(data);
-  });
-}
+  // function fetchAndReRenderAnimalWithId(animalId) {
+  // $.get('/api/animals/' + animalId, function(data) {
+  //   // remove the current instance of the animal from the page
+  //   $('div[data-animal-id=' + animalId + ']').remove();
+  //   // re-render it with the new animal
+  //   renderAnimal(data);
+  // });
+// }
 
   function handleDeleteClick(e) {
-    var animalId = $(this).closest('.animal').data('animal-id');
-    console.log('deleting animal ' + animalId);
+    var animalId = $(this).parents('.animal').data('animal-id');
+    console.log('deleting animal' + animalId);
     $.ajax({
       url: '/api/animals/' + animalId,
       method: 'DELETE',
@@ -67,10 +68,3 @@ $(document).ready(function() {
     var html = animalsTemplate(animal);
     $('.scrollbox').append(html);
   }
-// function handleAnimalClick(e) {
-//   console.log('animal clicked!');
-//   var currentAnimalId = this.id;
-//   console.log('id',currentAnimalId);
-//   $('#animalModal').data('animal-id', currentAnimalId);
-//   $('#animalModal').modal();  // display the modal!
-//   }
