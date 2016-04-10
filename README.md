@@ -28,4 +28,4 @@ animal knowledge to share with others.
 * API access for sharing facts/animal profiles on Facebook
 
 ## Screenshots
-![Alt Text](screenshot.png "screenshot")
+![Alt Text](project-1/Screenshot.png "screenshot")
