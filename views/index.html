@@ -43,12 +43,13 @@
                     <div class="col-md-9 col-xs-12">
                       <ul class="list-group">
                          <h4>{{name}}</h4>
-                         <img {{bind-attr src="image"}} />
+                         <img src = {{styles/image}} />
                          <h4>location:</h4><p>{{location}}</p>
                          <h4>facts:</h4>
                          <ul>
                            {{#each facts}}
                            <li>{{fact}}</li>
+                           <br>
                            {{/each}}
                          </ul>
                          <button class='btn btn-danger delete-animal'>Delete Animal</button>
@@ -82,16 +83,16 @@
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="location">Location</label>
                           <div class="col-md-4">
-                            <input id="textinput" name="location" type="text" placeholder="Sub-Saharan Africa" class="form-control input-md">
+                            <input id="textinput" name="location" type="text" placeholder="Sub-Saharan Africa" class="form-control input-md" required="">
 
                           </div>
                         </div>
 
                         <!-- Textarea -->
                         <div class="form-group">
-                          <label class="col-md-4 control-label" for="funFact">Fun Fact</label>
+                          <label class="col-md-4 control-label" for="facts">Facts</label>
                           <div class="col-md-4">
-                            <textarea class="form-control" id="fact" name="funFact" placeholder="Share with the world!"></textarea>
+                            <textarea class="form-control" id="textarea" name="facts" placeholder="Share with the world!"></textarea>
                           </div>
                         </div>
 

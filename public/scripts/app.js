@@ -19,7 +19,6 @@ $(document).ready(function() {
     $(this).trigger("reset");
   });
 
-
   // $('#animals').on('click', handleAnimalClick);
   $('#animals').on('click', '.delete-animal', handleDeleteClick);
   // $('#animals').on('click', 'edit-animal', handleEditClick);
@@ -36,8 +35,8 @@ $(document).ready(function() {
 }
 
   function handleDeleteClick(e) {
-    var animalId = $(this).parents('.animal').data('animal-id');
-    console.log('deleting animal' + animalId);
+    var animalId = $(this).closest('.animal').data('animal-id');
+    console.log('deleting animal ' + animalId);
     $.ajax({
       url: '/api/animals/' + animalId,
       method: 'DELETE',

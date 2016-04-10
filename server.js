@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/vendor', express.static(__dirname + '/views/index.html'));
 
 var controllers = require('./controllers');
-var db = require('./models');
+// var db = require('./models');
 
 
 /**********

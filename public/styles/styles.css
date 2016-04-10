@@ -51,6 +51,11 @@ h4 {
   padding-top: 20px;
 }
 
+img {
+  height: 200px;
+  width: auto;
+}
+
 button {
   margin-top: 20px;
 }
