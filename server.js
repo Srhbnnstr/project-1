@@ -40,7 +40,11 @@ app.get('/api', controllers.api.index);
 
 app.get('/api/animals', controllers.animals.index);
 
+app.get('/api/animals/:animalId', controllers.animals.show);
+
 app.post('/api/animals', controllers.animals.create);
+
+
 
 /**********
  * SERVER *

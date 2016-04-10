@@ -32,7 +32,7 @@
         <!-- ANIMAL LIST -->
         <div id="animals">
           <div class="container">
-            <div class="row">
+            <div class="row" data-animal-id="{{_id}}">
               <div class="col-sm-9 col-md-6 col-lg-6">
                 <div class="scrollbox">
                   <!-- handlebars template -->
@@ -98,7 +98,18 @@
           </div>
         </section>
         <!-- end of forms -->
-          <script id='profile-template' type='text/x-handlebars-template'>
+        <script id="modal-template" type="text/x-handlebars-template">
+          <div id="animalModal" class="modal">
+	           <div class="modal-body">
+		             <h3>{{ name }}</h3>
+		               <p>{{ image }}</p>
+                   <p>{{ location }}</p>
+                   <p>{{ facts }}</p>
+	               </div>
+                </div>
+              </script>
+
+        <script id='profile-template' type='text/x-handlebars-template'>
         <div class="modal fade" tabindex="-1" role="dialog" id="animalModal">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -106,7 +117,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                    <li class="list-group-item">
                      <div class="col-md-9 col-xs-12">
-                   <ul class="list-group">
+                       <ul class="list-group">
                      <li class="list-group-item">
                        <h4 class='inline-header'>Common Name:</h4>
                        <span class='animal-name'>{{name}}</span>
@@ -118,12 +129,12 @@
 
                      <li class="list-group-item">
                        <h4 class='inline-header'>Location:</h4>
-                       <span class='album-releaseDate'>{{location}}</span>
+                       <span class='location'>{{location}}</span>
                      </li>
 
                      <li class="list-group-item">
                        <h4 class='inline-header'>Facts:</h4>
-                       <span class='album-releaseDate'>{{#each facts}} {{/each}}</span>
+                       <span class='facts'>{{#each facts}} {{/each}}</span>
                      </li>
                    </ul>
                   </div>

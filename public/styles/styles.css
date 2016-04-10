@@ -39,7 +39,7 @@ h3 {
 .scrollbox {
   height: 400px;
   width: 400px;
-  overflow:auto;
+  overflow: auto;
   border:4px dotted  #3a3a3a;
   border-radius: 5%;
   padding: 10px 0 30px 60px;
