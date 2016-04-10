@@ -27,4 +27,5 @@ animal knowledge to share with others.
 * Clickable icons that will pull up an animals profile in a modal window
 * API access for sharing facts/animal profiles on Facebook
 
-## Screenshot(s) (optional)
+## Screenshots
+![Alt Text](https://github.com/Srhbnnstr/project-1/blob/master/screenshot.png "screenshot")
