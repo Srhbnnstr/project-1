@@ -4,7 +4,7 @@ var db = require('./models');
 var animalList= [];
 animalList.push({
   name: 'African Forest Elephant',
-  image: 'public/styles/elephant.jpg',
+  Image: 'elephant.jpg',
   location: 'Central and Southern Africa',
   facts: [{fact: "An adult can eat 300 lbs. of food in a day, according to the National Geographic."},
   {fact: "An elephant's trunk has more than 100,000 muscles. They use it to breathe, pick things up, make noises, drink and smell."}]
@@ -87,6 +87,7 @@ animalList.push({
   facts: [{fact: "The Tasmanian devil is nocturnal; it sleeps during the day and is stays awake at night. During the night, they sometimes journey up to 10 miles to hunt, according to the San Diego Zoo."},
   {fact: " Mother Devil's will have up to 50 young at once. At birth, the imps must race to the mother's pouch, where they compete for one of her four teats. Only those four will have a chance of surviving; the others will die due to malnourishment."}]
 });
+
 
 db.Animal.remove({}, function(err, animals){
   console.log('removed all animals');

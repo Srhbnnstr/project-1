@@ -42,6 +42,10 @@ h3 {
   margin: 20px 0 20px 60px;
 }
 
+.panel-default {
+  background-color: #dbdbdb
+}
+
 h4 {
   font-weight: bold;
   padding-top: 20px;

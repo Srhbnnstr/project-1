@@ -44,8 +44,6 @@ app.get('/api/animals/:animalId', controllers.animals.show);
 
 app.post('/api/animals', controllers.animals.create);
 
-app.post('/api/animals/:animalId/facts', controllers.facts.create);
-
 app.delete('/api/animals/:animalId', controllers.animals.destroy);
 
 app.put('api/animals/:animalId', controllers.animals.update);
