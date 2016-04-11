@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var factSchema = new Schema({
-  fact: [ Array ],
+  fact: String,
   timeAdded: { type : Date, default: Date.now },
   animal: String
 });

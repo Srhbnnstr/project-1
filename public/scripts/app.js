@@ -26,18 +26,18 @@ $(document).ready(function() {
   // $('#animals').on('click', '.save-animal', handleSaveClick);
 });
 
-function fetchAndReRenderAnimalWithId(animalId) {
-  $.get('/api/animals/' + animalId, function(data) {
-    // remove the current instance of the animal from the page
-    $('div[data-animal-id=' + animalId + ']').remove();
-    // re-render it with the new animal
+  function fetchAndReRenderAnimalWithId(animalId) {
+   $.get('/api/animals/' + animalId, function(data) {
+     // remove the current instance of the animal from the page
+     $('div[data-animal-id=' + animalId + ']').remove();
+     // re-render it with the new animal
     renderAnimal(data);
   });
-}
+  }
+
 
 function handleDeleteClick(e) {
-  var $animalRow = $(this).closest('.animal');
-  var animalId = $animalRow.data('animal-id');
+  var animalId = $(this).parents('.animals').data('animal-id');
   console.log('deleting animal' + animalId);
   $.ajax({
     url: '/api/animals/' + animalId,
