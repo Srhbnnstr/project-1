@@ -2,8 +2,8 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var factSchema = new Schema({
-  fact: [ String ],
-  timeAdded: String,
+  fact: [ Array ],
+  timeAdded: { type : Date, default: Date.now },
   animal: String
 });
 

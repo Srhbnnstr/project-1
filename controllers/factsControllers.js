@@ -17,8 +17,8 @@ function create(req,res) {
     foundAnimal.save(function(err, savedAnimal) {
       console.log('newFact created: ', newFact);
       res.json(newFact);
+    });
   });
- });
 }
 
 module.exports = {

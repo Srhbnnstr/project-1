@@ -25,117 +25,117 @@
 <body>
   <section class="container">
     <div class="row">
-            <img class="banner" src="styles/jumbo.jpg">
-          </div>
-        </div>
-        <hr>
+      <img class="banner" src="styles/jumbo.jpg">
+    </div>
+  </div>
+  <hr>
 
-        <!-- ANIMAL LIST -->
-        <div id="animals">
-          <div class="container">
-            <div class="row" data-animal-id="{{id}}">
-              <div class="col-sm-9 col-md-6 col-lg-6">
-                <div class="scrollbox">
-                  <!-- handlebars template -->
-                  <script id="animals-template" type="text/x-handlebars-template">
-                    <div class="col-md-9 col-xs-12">
-                      <ul class="list-group">
-                         <h4>{{name}}</h4>
-                         <img src="{{bind-attr src=image}}"/>
-                         <h4>location:</h4><p>{{location}}</p>
-                         <h4>facts:</h4>
-                         <ul>
-                           {{#each facts}}
-                           <li>{{fact}}</li>
-                           <br>
-                           {{/each}}
-                         </ul>
-                         <button class='btn btn-danger delete-animal' data-animal-id>Delete Animal</button>
-                         <button class='btn btn-primary edit-animal'>Edit Animal</button>
-                         <hr>
-                        </li>
-                    </script>
-                  </div>
-                </div>
-                <!-- BEGIN FORM SAMPLE -->
-
-                <section id='animal-form' class="container">
-                  <div class="row">
-
-                    <form class="form-horizontal">
-                      <fieldset>
-
-                        <!-- Form Name -->
-                        <h3>Add a New Animal to the List</h3>
-
-                        <!-- Text input-->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="name">Animal Name</label>
-                          <div class="col-md-4">
-                            <input id="name" name="name" type="text" placeholder="e.g. African Wild Dog" class="form-control input-md" required="">
-
-                          </div>
-                        </div>
-
-                        <!-- Text input-->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="location">Location</label>
-                          <div class="col-md-4">
-                            <input id="textinput" name="location" type="text" placeholder="Sub-Saharan Africa" class="form-control input-md" required="">
-
-                          </div>
-                        </div>
-
-                        <!-- Textarea -->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="funFact">Fun Fact</label>
-                          <div class="col-md-4">
-                         <textarea class="form-control" id="fact" name="funFact" placeholder="Share with the world!"></textarea>
-                        </div>
-                      </div>
-
-                        <!-- Button -->
-                        <div class="form-group">
-                          <label class="col-md-4 control-label" for="singlebutton"></label>
-                          <div class="col-md-4">
-                            <button id="submit" name="singlebutton" class="btn btn-default">Submit</button>
-                          </div>
-                        </div>
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              </div>
+  <!-- ANIMAL LIST -->
+  <div id="animals">
+    <div class="container">
+      <div class="row" data-animal-id="{{id}}">
+        <div class="col-sm-9 col-md-6 col-lg-6">
+          <div class="scrollbox">
+            <!-- handlebars template -->
+            <script id="animals-template" type="text/x-handlebars-template">
+              <div class="col-md-9 col-xs-12">
+                <ul class="list-group">
+                  <h4>{{name}}</h4>
+                  <img src="{{bind-attr src=image}}"/>
+                  <h4>location:</h4><p>{{location}}</p>
+                  <h4>facts:</h4>
+                  <ul>
+                    {{#each facts}}
+                    <li>{{fact}}</li>
+                    <br>
+                    {{/each}}
+                  </ul>
+                  <button class='btn btn-danger delete-animal' data-animal-id>Delete Animal</button>
+                  <button class='btn btn-primary edit-animal'>Edit Animal</button>
+                  <hr>
+                </li>
+              </script>
             </div>
           </div>
-        </section>
+          <!-- BEGIN FORM SAMPLE -->
 
-              <!-- Edit AnimalModal -->
-        <!-- <div class="modal fade bs-modal-lg" id="editAnimalModal" tabindex="-1" role="dialog" aria-labelledby="editSongsAnimalTitle">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="editAnimalModalTitle">Edit Animal</h4>
-              </div>
-              <div class="modal-body" id='editAnimalModalBody'>
-                <p> REPLACE #editAnimalModalBody </p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id='editAnimalModalSubmit'>Save changes</button>
-              </div>
-            </div><!-- /.modal-content -->
-          </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
+          <section id='animal-form' class="container">
+            <div class="row">
 
-        <footer>
-          <div class="copyright">
-            &copy; 2016 Copyright Ani-full. All rights reserved. Proudly crafted in San Francisco.
+              <form class="form-horizontal">
+                <fieldset>
+
+                  <!-- Form Name -->
+                  <h3>Add a New Animal to the List</h3>
+
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="name">Animal Name</label>
+                    <div class="col-md-4">
+                      <input id="name" name="name" type="text" placeholder="e.g. African Wild Dog" class="form-control input-md" required="">
+
+                    </div>
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="location">Location</label>
+                    <div class="col-md-4">
+                      <input id="textinput" name="location" type="text" placeholder="Sub-Saharan Africa" class="form-control input-md" required="">
+
+                    </div>
+                  </div>
+
+                  <!-- Textarea -->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="funFact">Fun Fact</label>
+                    <div class="col-md-4">
+                      <textarea class="form-control" id="fact" name="funFact" placeholder="Share with the world!"></textarea>
+                    </div>
+                  </div>
+
+                  <!-- Button -->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="singlebutton"></label>
+                    <div class="col-md-4">
+                      <button id="submit" name="singlebutton" class="btn btn-default">Submit</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
           </div>
-        </footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Edit AnimalModal -->
+  <!-- <div class="modal fade bs-modal-lg" id="editAnimalModal" tabindex="-1" role="dialog" aria-labelledby="editSongsAnimalTitle">
+  <div class="modal-dialog" role="document">
+  <div class="modal-content">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h4 class="modal-title" id="editAnimalModalTitle">Edit Animal</h4>
+</div>
+<div class="modal-body" id='editAnimalModalBody'>
+<p> REPLACE #editAnimalModalBody </p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-primary" id='editAnimalModalSubmit'>Save changes</button>
+</div>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<footer>
+  <div class="copyright">
+    &copy; 2016 Copyright Ani-full. All rights reserved. Proudly crafted in San Francisco.
+  </div>
+</footer>
 
 
 
-      </body>
-      </html>
+</body>
+</html>

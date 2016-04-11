@@ -3,8 +3,8 @@
 //require express in our app
 var express = require('express');
 // generate a new express app and call it 'app'
-  var app = express();
-  var bodyParser = require('body-parser');
+var app = express();
+var bodyParser = require('body-parser');
 
 // serve static files from public folder
 app.use(express.static(__dirname + '/public'));
@@ -20,12 +20,12 @@ var db = require('./models');
 
 
 /**********
- * ROUTES *
- **********/
+* ROUTES *
+**********/
 
 /*
- * HTML Endpoints
- */
+* HTML Endpoints
+*/
 
 app.get('/', function homepage (req, res) {
   res.sendFile(__dirname + '/views/index.html');
@@ -33,8 +33,8 @@ app.get('/', function homepage (req, res) {
 
 
 /*
- * JSON API Endpoints
- */
+* JSON API Endpoints
+*/
 
 app.get('/api', controllers.api.index);
 
@@ -53,8 +53,8 @@ app.put('api/animals/:animalId', controllers.animals.update);
 
 
 /**********
- * SERVER *
- **********/
+* SERVER *
+**********/
 
 // listen on port 3000
 app.listen(process.env.PORT || 3000, function () {
