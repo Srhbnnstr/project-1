@@ -29,7 +29,7 @@
           </div>
         </div>
         <hr>
-        
+
         <!-- ANIMAL LIST -->
         <div id="animals">
           <div class="container">
@@ -40,8 +40,8 @@
                   <script id="animals-template" type="text/x-handlebars-template">
                     <div class="col-md-9 col-xs-12">
                       <ul class="list-group">
+                        <img class="animal-photo" src="{{image.url}}">
                          <h4>{{name}}</h4>
-                         {{image}}
                          <h4>location:</h4><p>{{location}}</p>
                          <h4>facts:</h4>
                          <ul>
@@ -87,12 +87,12 @@
                         </div>
 
                         <!-- Textarea -->
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                           <label class="col-md-4 control-label" for="funFact">Fun Fact</label>
                           <div class="col-md-4">
                          <textarea class="form-control" id="fact" name="funFact" placeholder="Share with the world!"></textarea>
                         </div>
-                      </div>
+                      </div> -->
 
                         <!-- Button -->
                         <div class="form-group">
