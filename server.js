@@ -44,14 +44,11 @@ app.get('/api/animals/:animalId', controllers.animals.show);
 
 app.post('/api/animals', controllers.animals.create);
 
-app.delete('/api/animals/:id', function (req, res) {
-  console.log(req.params);
-  var animalId = req.params.id;
+app.post('/api/animals/:animalId/facts', controllers.facts.create);
 
-  db.Animal.findOneAndRemove({ _id: animalId }, function (err, deletedAnimal) {
-    res.json(deletedAnimal);
-  });
-});
+app.delete('/api/animals/:animalId', controllers.animals.destroy);
+
+app.put('api/animals/:animalId', controllers.animals.update);
 
 
 
