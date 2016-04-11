@@ -26,17 +26,18 @@ $(document).ready(function() {
   // $('#animals').on('click', '.save-animal', handleSaveClick);
 });
 
-  // function fetchAndReRenderAnimalWithId(animalId) {
-  // $.get('/api/animals/' + animalId, function(data) {
-  //   // remove the current instance of the animal from the page
-  //   $('div[data-animal-id=' + animalId + ']').remove();
-  //   // re-render it with the new animal
-  //   renderAnimal(data);
-  // });
-// }
+  function fetchAndReRenderAnimalWithId(animalId) {
+  $.get('/api/animals/' + animalId, function(data) {
+    // remove the current instance of the animal from the page
+    $('div[data-animal-id=' + animalId + ']').remove();
+    // re-render it with the new animal
+    renderAnimal(data);
+  });
+}
 
   function handleDeleteClick(e) {
-    var animalId = $(this).parents('.animals').data('animal-id');
+    var $animalRow = $(this).closest('.animal');
+    var animalId = $animalRow.data('animal-id');
     console.log('deleting animal' + animalId);
     $.ajax({
       url: '/api/animals/' + animalId,
@@ -50,15 +51,6 @@ $(document).ready(function() {
     console.log('removing the following animal from the page:', deletedAnimalId);
     $('div[data-animal-id=' + deletedAnimalId + ']').remove();
   }
-
-// animals.forEach(function(animal) {
-//   var ajaxCall = $.ajax({
-//     method: 'PUT',
-//     url: url + data._id,
-//     error: function(err) {console.log('Error updating', animal.name, err); }
-//   });
-//     deferreds.push(ajaxCall);
-//   });
 
   function renderAnimal(animal) {
     console.log('rendering animal', animal);

@@ -98,4 +98,19 @@ db.Animal.remove({}, function(err, animals){
     console.log("created", animals.length, "animals");
     process.exit();
   });
+
+  db.Animal.remove({}, function(err, animals){
+      console.log('removed all animals');
+      animalList.forEach(function (animalData) {
+        var animal = new db.Animal({
+          name: animalData.name,
+          image: animalData.image,
+          location: animalData.location,
+          facts: animalData.fact
+        });
+        });
+      });
+    });
+
+  });
 });
