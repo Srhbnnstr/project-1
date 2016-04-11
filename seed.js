@@ -4,7 +4,7 @@ var db = require('./models');
 var animalList= [];
 animalList.push({
   name: 'African Forest Elephant',
-  image: 'styles/elephant.jpg',
+  image: 'public/styles/elephant.jpg',
   location: 'Central and Southern Africa',
   facts: [{fact: "An adult can eat 300 lbs. of food in a day, according to the National Geographic."},
   {fact: "An elephant's trunk has more than 100,000 muscles. They use it to breathe, pick things up, make noises, drink and smell."}]

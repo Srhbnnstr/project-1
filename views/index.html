@@ -40,7 +40,7 @@
                   <script id="animals-template" type="text/x-handlebars-template">
                     <div class="col-md-9 col-xs-12">
                       <ul class="list-group">
-                        <img class="animal-photo" src="{{image.url}}">
+                        <img class="animal-photo" src="{{image}}">
                          <h4>{{name}}</h4>
                          <h4>location:</h4><p>{{location}}</p>
                          <h4>facts:</h4>
@@ -71,7 +71,7 @@
                         <!-- Text input-->
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="name">Animal Name</label>
-                          <div class="col-md-4">
+                          <div class="col-md-6">
                             <input id="name" name="name" type="text" placeholder="e.g. African Wild Dog" class="form-control input-md" required="">
 
                           </div>
@@ -80,7 +80,7 @@
                         <!-- Text input-->
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="location">Location</label>
-                          <div class="col-md-4">
+                          <div class="col-md-6">
                             <input id="textinput" name="location" type="text" placeholder="Sub-Saharan Africa" class="form-control input-md" required="">
 
                           </div>

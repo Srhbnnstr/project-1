@@ -1,12 +1,12 @@
 var db = require('../models');
 
 // app.get('/api/animals/:animalId/facts', controllers.facts.index);
-function index(req, res) {
-  db.Animal.findById(req.params.animalId, function(err, foundAnimal) {
-    console.log('responding with animals:', foundAnimal.facts);
-    res.json(foundAnimal.facts);
-  });
-}
+// function index(req, res) {
+//   db.Animal.findById(req.params.animalId, function(err, foundAnimal) {
+//     console.log('responding with animals:', foundAnimal.facts);
+//     res.json(foundAnimal.facts);
+//   });
+// }
 
 //POST '/api/animals/:animalId/facts'
 function create(req,res) {
@@ -22,6 +22,6 @@ function create(req,res) {
 }
 
 module.exports = {
-  index: index,
+  // index: index,
   create: create
 };
