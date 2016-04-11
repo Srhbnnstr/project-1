@@ -88,15 +88,6 @@ animalList.push({
   {fact: " Mother Devil's will have up to 50 young at once. At birth, the imps must race to the mother's pouch, where they compete for one of her four teats. Only those four will have a chance of surviving; the others will die due to malnourishment."}]
 });
 
-sampleFacts.push({fact: "An adult can eat 300 lbs. of food in a day, according to the National Geographic."},
-                 {fact: "An elephant's trunk has more than 100,000 muscles. They use it to breathe, pick things up, make noises, drink and smell."},
-                 {animal: 'elephant'});
-
-
-animalList.forEach(function(animal) {
-  animal.facts = sampleFacts;
-});
-
 db.Animal.remove({}, function(err, animals){
   console.log('removed all animals');
 
