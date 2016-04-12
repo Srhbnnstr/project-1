@@ -90,8 +90,9 @@ function handleDeleteClick(e) {
   // var animalId = $(this).parents('.animal').data('animal-id');
   var animalId = $(this).closest('id');
   console.log('deleting animal', animalId);
+  console.log('Id attribute', e);
   $.ajax({
-    url: '/api/animals/:id' + animalId,
+    url: '/api/animals/' + e.target.attributes.handleId.value,
     method: 'DELETE',
     success: handleDeleteAnimalSuccess
   });
