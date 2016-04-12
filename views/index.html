@@ -39,8 +39,8 @@
             <!-- handlebars template -->
             <script id="animals-template" type="text/x-handlebars-template">
               <div class="col-md-9 col-xs-12">
-                <ul class="list-group">
-                  <h4>{{name}}</h4>
+                <!-- <ul class="list-group"> -->
+                  <h3>{{name}}</h3>
                   <img src={{image}}>
                   <h4>location:</h4><p>{{location}}</p>
                   <h4>facts:</h4>
@@ -50,8 +50,8 @@
                     <br>
                     {{/each}}
                   </ul>
-                  <button class='btn btn-danger delete-animal' data-animal-id>Delete Animal</button>
-                  <button class='btn btn-primary edit-animal'>Edit Animal</button>
+                <button class='btn btn-danger delete-animal' data-animal-id = {{_id}}>Delete Animal</button>
+                <button class='btn btn-primary edit-animal' data-animal-id>Edit Animal</button>
                   <hr>
               </script>
             </div>

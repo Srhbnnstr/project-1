@@ -30,7 +30,7 @@ $(document).ready(function() {
   // $('#animals').on('click', '.save-animal', handleSaveClick);
 });
 
-var animalId = $modal.find('form').data('animal-id');
+// var animalId = $modal.find('form').data('animal-id');
 
 function fetchAndReRenderAnimalWithId(animalId) {
   $.get('/api/animals/' + animalId, function(data) {
@@ -87,8 +87,9 @@ function handleEditClick(e) {
 
 
 function handleDeleteClick(e) {
-  var animalId = $(this).parents('.animal').data('animal-id');
-  console.log('deleting animal' + animalId);
+  // var animalId = $(this).parents('.animal').data('animal-id');
+  var animalId = $(this).closest('id');
+  console.log('deleting animal', animalId);
   $.ajax({
     url: '/api/animals/:id' + animalId,
     method: 'DELETE',
