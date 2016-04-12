@@ -40,18 +40,18 @@
             <script id="animals-template" type="text/x-handlebars-template">
               <div class="col-md-9 col-xs-12">
                 <!-- <ul class="list-group"> -->
-                  <h3 class='name'>{{name}}</h3>
-                  <img src={{image}}>
-                  <h4 class = 'location'>location:</h4><p>{{location}}</p>
-                  <h4 class ='facts'>facts:</h4>
-                  <ul>
-                    {{#each facts}}
-                    <li>{{fact}}</li>
-                    <br>
-                    {{/each}}
-                  </ul>
+                <h3 class='name'>{{name}}</h3>
+                <img src={{image}}>
+                <h4 class = 'location'>location:</h4><p>{{location}}</p>
+                <h4 class ='facts'>facts:</h4>
+                <ul>
+                  {{#each facts}}
+                  <li>{{fact}}</li>
+                  <br>
+                  {{/each}}
+                </ul>
                 <button class='btn btn-danger delete-animal' handleId = {{_id}} >Delete Animal</button>
-                  <hr>
+                <hr>
               </script>
             </div>
           </div>
@@ -59,10 +59,8 @@
 
           <section id='animal-form' class="container">
             <div class="row">
-
               <form class="form-horizontal">
                 <fieldset>
-
                   <!-- Form Name -->
                   <h3>Add a New Animal to the List</h3>
 
@@ -92,6 +90,15 @@
                     </div>
                   </div>
 
+                  <!-- <div class="form-group"> -->
+                    <!-- <label class="col-md-4 control-label" for="Upload">Image Upload</label> -->
+                    <!-- <div class="col-md-6"> -->
+                      <!-- <input type="url" id="image" placeholder="paste image url"/>  -->
+                    <!-- </div> -->
+                  <!-- </div>  will add image upload later-->
+
+
+
                   <!-- Button -->
                   <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton"></label>
@@ -108,89 +115,10 @@
     </div>
   </section>
 
-  <!-- begin editModal: this is not visible until you call .modal() on it -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="editModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Edit Animal</h4>
-          </div>
-          <div class="modal-body">
-<!--
-            <fieldset class='form-horizontal'>
-
-              <div class="form-group">
-                <label class="col-md-4 control-label" for="songName">Song Name</label>
-                <div class="col-md-4">
-                  <input id="songName" name="songName" type="text" placeholder="" class="form-control input-md" required="">
-                </div>
-              </div>
-
-
-              <div class="form-group">
-                <label class="col-md-4 control-label" for="trackNumber">Track Number</label>
-                <div class="col-md-4">
-                  <input id="trackNumber" name="trackNumber" type="text" placeholder="" class="form-control input-md">
-                </div>
-              </div>
-            </fieldset> -->
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="saveSong">Save changes</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-
-  <!-- Edit Animal Modal -->
-  <div class="modal fade bs-modal-lg" id="editAnimalModal" tabindex="-1" role="dialog" aria-labelledby="editAnimal">
-  <div class="modal-dialog" role="document">
-  <div class="modal-content">
-  <div class="modal-header">
-  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <h4 class="modal-title" id="editAnimalModalTitle">Edit Animal</h4>
-</div>
-<div class="modal-body" id='editAnimalModalBody'>
-<p> REPLACE #editAnimalModalBody </p>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary" id='editAnimalModalSubmit'>Save changes</button>
-</div>
-</div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
 <footer>
   <div class="copyright">
     &copy; 2016 Copyright Ani-full. All rights reserved. Proudly crafted in San Francisco.
   </div>
 </footer>
-
-
-
 </body>
-
-<!-- template for editing / deleting an animal -->
-  <script id='animal-edit-template' type='text/x-handlebars-template'>
-    {{#each animals}}
-    <!-- <form class="form-inline" id="{{_id}}" data-animal-id="{{../animalId}}" >
-      <div class="form-group">
-        <input type="text" class="form-control song-trackNumber" value="{{trackNumber}}">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control song-name" value="{{name}}">
-      </div>
-      <div class="form-group">
-        <button class="btn btn-danger" data-song-id="{{_id}}">x</button>
-      </div> -->
-    </form>
-    {{/each}}
-  </script>
-
-</script>
 </html>
