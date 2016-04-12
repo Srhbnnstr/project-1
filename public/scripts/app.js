@@ -42,7 +42,6 @@ function handleEditClick(e) {
 }
 
 function handleDeleteClick(e) {
-  // var animalId = $(this).parents('.animal').data('animal-id');
   var animalId = $(this).closest('id');
   console.log('deleting animal', animalId);
   console.log('Id attribute', e);

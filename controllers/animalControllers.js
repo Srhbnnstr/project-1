@@ -13,10 +13,7 @@ function index(req, res) {
 
 function create(req, res) {
   console.log('body', req.body);
-
-  //  var facts = req.body.facts.split(',').map(function(item) { return item.trim(); } );
-  //   // req.body.facts = facts;
-
+  
   db.Animal.create(req.body, function(err, animal) {
     if (err) { console.log('error', err); }
     console.log(animal);
