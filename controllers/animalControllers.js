@@ -44,6 +44,7 @@ function update(req, res) {
     if(err) {console.log('animalControllers.update error', err); }
     foundAnimal.name = req.body.name;
     foundAnimal.location = req.body.location;
+    foundAnimal.facts = req.body.facts;
     foundAnimal.save(function(err, savedAnimal) {
       if(err) {console.log('saving animal failed'); }
       res.json(savedAnimal);

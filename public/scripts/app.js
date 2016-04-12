@@ -85,7 +85,6 @@ function handleEditClick(e) {
 //   });
 }
 
-
 function handleDeleteClick(e) {
   // var animalId = $(this).parents('.animal').data('animal-id');
   var animalId = $(this).closest('id');
@@ -100,9 +99,11 @@ function handleDeleteClick(e) {
 
 function handleDeleteAnimalSuccess(data) {
   var deletedAnimalId = data._id;
+  data._id = $(this);
   console.log('removing the following animal from the page:', deletedAnimalId);
-  $('div[data-animal-id=' + deletedAnimalId + ']').remove();
+    $(this).fadeOut(500, function() { $(this).remove(); });
 }
+
 
 function renderAnimal(animal) {
   console.log('rendering animal', animal);
