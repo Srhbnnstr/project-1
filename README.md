@@ -21,7 +21,7 @@ https://pure-anchorage-99457.herokuapp.com/
 ## Existing Features
 
 * Aesthetically pleasing design and appearance
-* A user can access a list of animal profiles and edit/delete existing profiles
+* A user can access a list of animal profiles and delete existing profiles
 * Input forms that allow users to add an animal and it's information to the list template
 
 ## Planned Features
