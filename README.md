@@ -5,7 +5,7 @@ animal knowledge to share with others.
 ![Alt Text](https://github.com/Srhbnnstr/project-1/blob/master/Screenshot.png "screenshot")
 
 ## Link to project hosted on Heroku
-https://git.heroku.com/pure-anchorage-99457.git
+https://pure-anchorage-99457.herokuapp.com/
 
 ## Technologies Used
 
