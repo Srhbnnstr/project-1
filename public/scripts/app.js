@@ -101,7 +101,7 @@ function handleDeleteAnimalSuccess(data) {
   var deletedAnimalId = data._id;
   data._id = $(this);
   console.log('removing the following animal from the page:', deletedAnimalId);
-    $(this).fadeOut(500, function() { $(this).remove(); });
+  window.location.reload();
 }
 
 

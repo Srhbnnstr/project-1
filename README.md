@@ -2,7 +2,10 @@
 Use Ani-full to learn about different animals all around the world and add your own
 animal knowledge to share with others.
 
+![Alt Text](https://github.com/Srhbnnstr/project-1/blob/master/Screenshot.png "screenshot")
+
 ## Link to project hosted on Heroku
+https://git.heroku.com/pure-anchorage-99457.git
 
 ## Technologies Used
 
@@ -27,5 +30,4 @@ animal knowledge to share with others.
 * Clickable icons that will pull up an animals profile in a modal window
 * API access for sharing facts/animal profiles on Facebook
 
-## Screenshots
-![Alt Text](https://github.com/Srhbnnstr/project-1/blob/master/Screenshot.png "screenshot")
+![Alt Text](https://github.com/Srhbnnstr/project-1/blob/master/Screenshot2.png "screenshot2")
