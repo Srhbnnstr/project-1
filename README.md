@@ -30,4 +30,4 @@ https://pure-anchorage-99457.herokuapp.com/
 * Clickable icons that will pull up an animals profile in a modal window
 * API access for sharing facts/animal profiles on Facebook
 
-![Alt Text](https://github.com/Srhbnnstr/project-1/blob/master/screenshotApp.jpg "screenshot2")
+![Alt Text](https://github.com/Srhbnnstr/project-1/blob/master/screenshotApp2.png "screenshot2")
