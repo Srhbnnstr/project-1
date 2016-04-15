@@ -42,12 +42,17 @@ h3 {
   margin: 20px 0 20px 20px;
 }
 
+.scrollbox::-webkit-scrollbar {
+    display: none;
+}
+
 .scrollbox img {
   width: 300px;
   height: auto;
   border: 2px solid #424242;
   padding: 5px;
   margin: auto;
+  background-color: #fff;
 }
 
 .scrollbox h3 {
