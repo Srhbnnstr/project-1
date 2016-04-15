@@ -14,7 +14,7 @@ $(document).ready(function() {
       facts: [{
         fact:$("#fact").val()
       }],
-      // image: $('#image').attr('src', $('#url').val()) will fix later
+      image: $('#image').append('#url').val()
     };
     console.log('formData', dataObject);
     $.post('/api/animals', dataObject, function(animal) {
