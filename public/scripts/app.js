@@ -16,6 +16,7 @@ $(document).ready(function() {
       }],
       image: $('#image').append('#url').val()
     };
+    
     console.log('formData', dataObject);
     $.post('/api/animals', dataObject, function(animal) {
       console.log('animal after POST', animal);

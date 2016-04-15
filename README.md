@@ -22,7 +22,7 @@ https://pure-anchorage-99457.herokuapp.com/
 
 * Aesthetically pleasing design and appearance
 * A user can access a list of animal profiles and delete existing profiles
-* Input forms that allow users to add an animal and it's information to the list template
+* Input forms that allow users to add an animal's information and photo to the list template
 
 ## Planned Features
 
