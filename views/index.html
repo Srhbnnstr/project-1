@@ -127,16 +127,45 @@
           <h4 class="modal-title">Edit Animal</h4>
         </div>
         <div class="modal-body">
-          <p>add edit form here</p>
-        </div>
+
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="name">Animal Name</label>
+            <div class="col-md-6">
+              <input id="name" name="name" type="text" placeholder="e.g. African Wild Dog" class="form-control input-md" required="">
+            </div>
+          </div>
+
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="location">Location</label>
+                <div class="col-md-6">
+              <input id="locationInput" name="location" type="text" placeholder="Sub-Saharan Africa" class="form-control input-md" required="">
+            </div>
+          </div>
+
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="funFact">Fun Fact</label>
+                <div class="col-md-6">
+              <textarea class="form-control" id="fact" name="funFact" placeholder="Share with the world!"></textarea>
+            </div>
+          </div>
+
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="Upload">Image Upload</label>
+                <div class="col-md-6">
+               <input type="url" id="image" placeholder="paste image url">
+             </div>
+           </div>
+
         <div class="modal-footer">
+          <div class="col-md-6">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id='editModalSubmit'>Save changes</button>
+          <button type="button" class="btn btn-primary" id='editSongsModalSubmit'>Save changes</button>
+        </div>
         </div>
       </div>
-
     </div>
   </div>
+</div>
 
 <footer>
   <div class="copyright">

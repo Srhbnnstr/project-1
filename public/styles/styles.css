@@ -106,3 +106,9 @@ footer {
 .hidden {
   display: none;
 }
+
+/* MODAL */
+
+#editModal .modal-footer {
+  border: 0px;
+}
