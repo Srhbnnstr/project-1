@@ -33,7 +33,7 @@
   <!-- ANIMAL LIST -->
   <div id="animals">
     <div class="container">
-      <div class="row" data-animal-id="{{id}}">
+      <div class="row" data-animal-id="{{_id}}">
         <div class="col-sm-9 col-md-8 col-lg-6">
           <div class="scrollbox">
             <!-- handlebars template -->
@@ -51,7 +51,7 @@
                   {{/each}}
                 </ul>
                 <button class='btn btn-danger delete-animal' handleId = {{_id}} >Delete Animal</button>
-                <button class='btn btn-primary edit-animal'>Edit Animal</button>
+                <button class='btn btn-primary edit-animal' data-toggle="modal" data-target="#editModal" handleId = {{_id}}>Edit Animal</button>
                 <hr>
               </script>
             </div>
@@ -115,6 +115,28 @@
       </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div id="editModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit Animal</h4>
+        </div>
+        <div class="modal-body">
+          <p>add edit form here</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id='editModalSubmit'>Save changes</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 <footer>
   <div class="copyright">
