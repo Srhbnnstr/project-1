@@ -10,7 +10,7 @@
   "author": "Sarah Bannister <srhbnnstr@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "git": "//github.com/srhbnnstr/project-1.git#commit-ish",
+    "git": "//github.com/srhbnnstr/project-1.git",
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "mongodb": "^2.1.16",
