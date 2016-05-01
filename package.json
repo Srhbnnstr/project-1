@@ -16,9 +16,6 @@
     "mongoose": "^4.4.11",
     "nodemon": "^1.9.1"
   },
-  "engines": {
-    "node": "v5.11.0"
-  },
   "directories": {
     "doc": "docs"
   },

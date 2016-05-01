@@ -24,6 +24,7 @@ https://pure-anchorage-99457.herokuapp.com/
 * Responsive to different screen sizes
 * A user can access a list of animal profiles and delete existing profiles
 * Input forms that allow users to add an animal's information and photo to the list template
+* Utilizes CRUD operations for data storage
 
 ## Planned Features
 
