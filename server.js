@@ -26,7 +26,6 @@ var db = require('./models');
 /*
 * HTML Endpoints
 */
-
 app.get('/', function homepage (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });

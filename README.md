@@ -21,13 +21,14 @@ https://pure-anchorage-99457.herokuapp.com/
 ## Existing Features
 
 * Aesthetically pleasing design and appearance
+* Responsive to different screen sizes
 * A user can access a list of animal profiles and delete existing profiles
 * Input forms that allow users to add an animal's information and photo to the list template
 
 ## Planned Features
 
-* Create a plotted map that will have different animal icons in their native habitat
+* Create a plotted map that will include different animal icons in their native habitat
 * Clickable icons that will pull up an animals profile in a modal window
-* API access for sharing facts/animal profiles on Facebook
+* API access for sharing facts on Facebook
 
 ![Alt Text](https://github.com/Srhbnnstr/project-1/blob/master/screenshotApp2.png "screenshot2")

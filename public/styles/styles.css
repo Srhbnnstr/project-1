@@ -112,3 +112,7 @@ footer {
 #editModal .modal-footer {
   border: 0px;
 }
+
+#modal-form {
+  padding-bottom: 5px;
+}
