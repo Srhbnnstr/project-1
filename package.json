@@ -10,12 +10,14 @@
   "author": "Sarah Bannister <srhbnnstr@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "git": "//github.com/srhbnnstr/project-1.git",
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "mongodb": "^2.1.16",
     "mongoose": "^4.4.11",
     "nodemon": "^1.9.1"
+  },
+  "engines": {
+    "node": "v5.11.0"
   },
   "directories": {
     "doc": "docs"
