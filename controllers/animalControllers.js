@@ -22,7 +22,7 @@ function create(req, res) {
 }
 
 function show(req, res) {
-  db.Animal.findById(req.params.AnimalId, function(err, foundAnimal) {
+  db.Animal.findById(req.params.animalId, function(err, foundAnimal) {
     if(err) {console.log('animalControllers.show error', err); }
     console.log('animalControllers.show responding with', foundAnimal);
     res.json(foundAnimal);

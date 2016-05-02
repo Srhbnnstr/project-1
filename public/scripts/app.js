@@ -26,6 +26,8 @@ $(document).ready(function() {
   });
 
   $('#animals').on('click', '.delete-animal', handleDeleteClick);
+  $('#animals').on('click', '.edit-animal', handleEditClick);
+  $('#editModal').on('click', 'button#editModalSubmit', handleUpdateSave);
 
 function fetchAndReRenderAnimalWithId(animalId) {
   $.get('/api/animals/' + animalId, function(data) {
@@ -40,6 +42,30 @@ function handleEditClick(e) {
   var $animalRow = $(this).closest('.animal');
   var animalId = $animalRow.data('animal-id');
   console.log('edit animal', animalId);
+}
+
+function handleUpdateSave(e) {
+  // build all the songs objects up
+  var $modal = $('#editModal');
+  if($modal.find('form').length < 1) {
+    // if there are no form elements, then there are no songs to update
+    $modal.modal('hide');
+    return;
+  }
+  var animalId = $modal.find('form').data('animal-id');
+
+  var updatedAnimal = [];
+  $modal.find('form').each(function () {
+    var singleAnimal = {};
+    singleAnimal._id = $(this).attr('id');
+    singleAnimal.name = $(this).find('input.name').val();
+    singleAnimal.location = $(this).find('input.location').val();
+    singleAnimal.fact = $(this).find('input.fact').val();
+    singleAnimal.image = $(this).find('input.image').val();
+    console.log('found updated data for animal: ', singleAnimal);
+    updatedAnimal.push(singleAnimal);
+  });
+  $modal.modal('hide');
 }
 
 function handleDeleteClick(e) {
